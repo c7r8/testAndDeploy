@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  DB_NAME: bad_memowall
+  DB_NAME: bad_memowall2
   DB_USER: postgres
   DB_PASSWORD: postgres
   
