@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  DB_NAME: bad_memowall2
+  TESTDB_NAME: bad_memowall2
   DB_USER: postgres
   DB_PASSWORD: postgres
   
@@ -19,7 +19,7 @@ jobs:
       postgres:
         image: postgres
         env: 
-          DB_NAME: ${{env.DB_NAME}}
+          TESTDB_NAME: ${{env.TESTDB_NAME}}
           DB_PASSWORD: ${{env.DB_PASSWORD}}
         ports:
           - 5432:5432
