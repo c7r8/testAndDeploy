@@ -1,0 +1,31 @@
+name: testAndDeploy
+on:
+  push:
+    branches:
+      - '*'
+  workflow_dispatch:
+
+env:
+  DB_NAME: bad_memowall
+  DB_USER: postgres
+  DB_PASSWORD: postgres
+  
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    container: node:latest
+    services:
+      postgres:
+        image: postgres
+        env: 
+          DB_NAME: ${{env.DB_NAME}}
+          DB_PASSWORD: ${{env.DB_PASSWORD}}
+        ports:
+          - 5432:5432
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          yarn install 
+          yarn knex migrate:latest --env test
+          yarn jest
