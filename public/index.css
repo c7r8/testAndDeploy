@@ -1,0 +1,72 @@
+body {
+  background-image: url("background.jpeg");
+  background-repeat: repeat;
+}
+
+#memo-board {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.memo {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: #f5e37b;
+  box-shadow: 10px 10px 10px black;
+  position: relative;
+}
+
+#input-box {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: #f5e37b;
+  box-shadow: 10px 10px 10px black;
+}
+#editing-area {
+  text-align: center;
+  background-color: #7b1517;
+  padding: 30px;
+}
+
+.admin-title {
+  color: #d10c00;
+}
+
+.button-div .bi {
+  color: black;
+  background-color: white;
+  border-radius: 100px;
+  padding: 8px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.memo .btn-edit {
+  right: -12px;
+  bottom: -12px;
+}
+.memo .btn-delete {
+  right: -12px;
+  top: -12px;
+}
+.memo .btn-like {
+  left: -12px;
+  bottom: -12px;
+}
+
+/* .button-div .bi-pen {
+  right: -12px;
+  bottom: -12px;
+}
+.button-div .bi-trash {
+  right: -12px;
+  top: -12px;
+} */

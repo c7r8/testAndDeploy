@@ -1,0 +1,7 @@
+\c c21_memo_wall
+
+DROP TABLE IF EXISTS likes;
+
+DROP TABLE IF EXISTS memos;
+
+DROP TABLE IF EXISTS users;
