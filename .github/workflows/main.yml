@@ -22,7 +22,7 @@ jobs:
           POSTGRES_DB: ${{env.POSTGRES_DB}}
           POSTGRES_PASSWORD: ${{env.POSTGRES_PASSWORD}}
         ports:
-          - 8080:8080
+          - 5432:5432
     steps:
       - uses: actions/checkout@v3
       - run: |
