@@ -7,8 +7,9 @@ on:
 
 env:
   TESTDB_NAME: bad_memowall2
-  DB_USER: postgres
+  DB_USERNAME: postgres
   DB_PASSWORD: postgres
+  DB_HOST: postgres
   
 
 jobs:
